@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        function Update() {
+            // console.log("this is update");
+            var now = new Date();
+            var seco = now.getSeconds()*6;
+            var minu = now.getMinutes();
+            var hour = (now.getHours() % 12) + minu / 60;
+            // var secangle = seco * 6;
+            var minangle = minu * 6;
+            var hourangle = hour * 30;
+            document.getElementById("sec").setAttribute("transform", "rotate(" + seco + ",200,200)");
+            document.getElementById("min").setAttribute("transform", "rotate(" + minangle + ",200,200)");
+            document.getElementById("hou").setAttribute("transform", "rotate(" + hourangle + ",200,200)");
+            setTimeout(Update, 1000);
+        }
+    </script> -->
+    <script src="clock.js"></script>
+    </head>
+    <body onLoad="Update()">
+        <center>
+        <svg height="400" width="400" style="border:2px solid">
+            <radialGradient id="my" cx="50%" cy="50%" r= "100%" fx="50%" fy="50%">
+                <stop  offset="30%" stop-color="white"></stop>
+                <stop  offset="100%" stop-color="black"></stop>
+               </radialGradient>
+               <circle cx="200" cy="200" r="100" style="fill:url(#my)" stroke="black" stroke-width="5" filter="url(#f1)"></circle>
+        <!-- <circle cx="200" cy="200" r="100" fill="none" stroke="black" stroke-width="5" filter="url(#f1)"></circle> -->
+        <!-- <circle cx="200" cy="200" r="103" fill="none" stroke="green" stroke-width="3"></circle> -->
+        <line x1="200" y1="200" x2="200" y2="145" stroke="red" id="hou" stroke-linecap="round" stroke-width="5"></line> 
+        <line x1="200" y1="200" x2="200" y2="135" stroke="blue" id="min" stroke-linecap="round" stroke-width="4"></line>
+        <line x1="200" y1="210" x2="200" y2="125" stroke="black" id="sec" stroke-linecap="round" stroke-width="3"></line>
+        <!-- <line x1="200" y1="200" x2="200" y2="100" stroke="yellow" transform="rotate(270,200,200)" stroke-width="3"></line>    -->
+       <circle cx="200" cy="200" r="3" fill="white" stroke="black"></circle>
+       <!-- <circle cx="200" cy="200" r="100" fill="none" stroke="black" stroke-width="7"></circle> -->
+       <text x="198" y="115" stroke-width="2" stroke="black">1</text>
+       <!-- <line x1="200" y1="110" x2="200" y2="100" stroke="black" stroke-linecap="round" stroke-width="7"></line> -->
+       <!-- <line x1="300" y1="200" x2="290" y2="200" stroke="black" stroke-linecap="round" stroke-width="7"></line> -->
+       <text x="289" y="205" stroke-width="2" stroke="black">3</text>
+       <text x="195" y="296" stroke-width="2" stroke="black">6</text>
+       <!-- <line x1="200" y1="300" x2="200" y2="290" stroke="black" stroke-linecap="round" stroke-width="7"></line> -->
+       <!-- <line x1="100" y1="200" x2="110" y2="200" stroke="black" stroke-linecap="round" stroke-width="7"></line> -->
+       <text x="104" y="205" stroke-width="2" stroke="black">9</text>
+       <line x1="250" y1="115" x2="245" y2="123" stroke="black" stroke-linecap="round" stroke-width="3" ></line>
+       <line x1="285" y1="150" x2="277" y2="155" stroke="black" stroke-linecap="round" stroke-width="3"></line>
+       <line x1="285" y1="249" x2="278" y2="245" stroke="black" stroke-linecap="round" stroke-width="3"></line>
+       <line x1="250" y1="285" x2="245" y2="278" stroke="black" stroke-linecap="round" stroke-width="3"></line>
+       <line x1="150" y1="285" x2="155" y2="278" stroke="black" stroke-linecap="round" stroke-width="3"></line>
+       <line x1="115" y1="250" x2="122" y2="246" stroke="black" stroke-linecap="round" stroke-width="3"></line>
+       <line x1="115" y1="150" x2="122" y2="155" stroke="black" stroke-linecap="round" stroke-width="3"></line>
+       <line x1="152" y1="115" x2="156" y2="123" stroke="black" stroke-linecap="round" stroke-width="3"></line>
+       <circle cx="200" cy="200" r="102" fill="none" stroke="blue" stroke-width="3"></circle>
+    </svg>
+</center>
+</body>
+</html>
